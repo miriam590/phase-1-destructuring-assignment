@@ -1,7 +1,10 @@
+// Define the farm animals string
 const farmAnimals = 'cow horse sheep pig chicken';
 
+// Define the colors array
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
+// Define the muppet object
 const muppet = {
   muppetName: 'Miss Piggy',
   color: 'pink',
@@ -10,6 +13,7 @@ const muppet = {
   partner: 'Kermit'
 };
 
+// Define the nested muppet object
 const nestedMuppet = {
   nestedName: 'Kermit',
   nestedColor: 'green',
@@ -28,13 +32,13 @@ const nestedMuppet = {
 // Strings
 
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
-const [ moo, neigh, baa, oink, cluck ] = farmAnimals.split(" ");
+const [moo, neigh, baa, oink, cluck] = farmAnimals.split(" ");
 
 // 2. Bolt the horse wandered off, so just give us four animals, and let's name them bessie, dolly, babe, and little.
-const [ bessie, , dolly, babe, little] = farmAnimals.split(" ");
+const [bessie, , dolly, babe, little] = farmAnimals.split(" ");
 
 // 3. Little the chicken had to go back to the coop, so now we're left with three. Let's use color variables of blackAndWhite, black, and pink.
-const [blackAndWhite, , black, pink ] = farmAnimals.split(" ");
+const [blackAndWhite, , black, pink] = farmAnimals.split(" ");
 
 // Arrays
 
@@ -46,16 +50,28 @@ const [r, o, y, g, b, , v] = colors;
 
 // 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg. 
 const [, , , , , indg] = colors;
+
 // Objects
 
 // 7. Use destructuring to assign all variables using the keys as the variable names
 const { muppetName, color, song, job, partner } = muppet;
 
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
-
 // Solution 8 without nested destructuring
 const { nestedJob, nestedPartner } = nestedMuppet;
 const { song2, song4 } = nestedMuppet.album.theMuppetMovie;
 
 // Solution 8 with nested destructuring
-// const { nestedJob, nestedPartner, album: { theMuppetMovie: { song2, song4 } } } = nestedMuppet
+// const { nestedJob, nestedPartner, album: { theMuppetMovie: { song2, song4 } } } = nestedMuppet;
+
+// Output the results
+console.log(`Muppet Name: ${muppetName}`);
+console.log(`Muppet Color: ${color}`);
+console.log(`Muppet Song: ${song}`);
+console.log(`Muppet Job: ${job}`);
+console.log(`Muppet Partner: ${partner}`);
+
+console.log(`Nested Muppet Job: ${nestedJob}`);
+console.log(`Nested Muppet Partner: ${nestedPartner}`);
+console.log(`Song 2: ${song2}`);
+console.log(`Song 4: ${song4}`);
